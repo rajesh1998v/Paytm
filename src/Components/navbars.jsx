@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-// import { Link,useNavigate } from 'react-router-dom';
+import React from "react";
 
 
 function Navbars() {
@@ -23,7 +22,7 @@ function Navbars() {
                 </div>
 
                 <div className="imf23">
-                    <img src="https://pwebassets.paytm.com/commonwebassets/paytmweb/header/images/logoutImg.svg" />
+                    <img src="https://pwebassets.paytm.com/commonwebassets/paytmweb/header/images/logoutImg.svg" alt="img" />
                 </div>
             </nav>
 

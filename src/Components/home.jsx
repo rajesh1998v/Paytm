@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-// import { Link,useNavigate } from 'react-router-dom';
+import React from "react";
 
 
 function Home() {
@@ -49,7 +48,7 @@ function Home() {
                 </div>
 
                 <div className="Awlk32">
-                    <img src="https://assetscdn1.paytm.com/images/catalog/view_item/3171065/27389616900368101.png" />
+                    <img src="https://assetscdn1.paytm.com/images/catalog/view_item/3171065/27389616900368101.png" alt="img1" />
                 </div>
 
                 <div className="z9vfs">
