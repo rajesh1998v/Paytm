@@ -59,6 +59,29 @@ function Home() {
                     </div>
                 </div>
 
+                <div className="ZyNsa">
+                    <div className="PoGrf">
+                        <img src="https://assetscdn1.paytm.com/images/catalog/view_item/2988609/20668546951073032.png" alt="offer"/>
+                    </div>
+                </div>
+
+                <div className="Sdefxs">
+                   
+                    <div className="AjDe2">
+                        <div className="kdwA">
+                            <img src="https://assetscdn1.paytm.com/images/catalog/view/342367/1725447383123.png" />
+                        </div>
+                        
+                        <div className="qixG2s">Pay anyone directly from your <span>bank account</span></div>
+                        
+                        <div className="x1MFf">
+                            Pay anyone, everywhere. Make contactless & secure payments in-stores or online using Paytm UPI or Directly from your Bank Account. Plus, send & receive money from anyone.
+                        </div>
+                    </div>
+                </div>
+
+                
+
             </div>sss
 
         </div>

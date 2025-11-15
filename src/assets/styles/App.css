@@ -28,12 +28,14 @@
 }
 /* ------------------------------ */
 .Zsef23 {
-  background-color: #f7f9fc;
-  padding: 20px 15px;
+  /* background-color: #f7f9fc; */
+  background-color: #a2b2c9;
+  padding: 10px 15px;
 }
 .Sdefxs {
   background-color: #fff;
   padding: 12px;
+  margin: 10px 0;
   border-radius: 20px;
   flex: 1 1;
 }
@@ -85,11 +87,13 @@
 
 /* ------------------------- */
 
-.Awlk32 {
+.Awlk32 img {
   align-self: center;
-  width: 300px;
-  height: 250px;
+  width: 100%;
+  /* height: 250px; */
   margin: 20px auto;
+  display: flex;
+  align-items: center;
 }
 
 /* ------------------------------ */
@@ -100,7 +104,7 @@
   max-width: 1170px;
 }
 
-.kaEw2 img{
+.kaEw2 img {
   margin-bottom: 20px;
   flex-direction: column;
   width: 100%;
@@ -109,4 +113,59 @@
   justify-content: start;
   flex-wrap: wrap;
   flex-direction: row;
+}
+
+/* -------------------------------- */
+.ZyNsa {
+  /* padding: 10px 20px; */
+  margin: 0 auto;
+  max-width: 1170px;
+}
+.PoGrf img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+/* -------------------------------- */
+.AjDe2 {
+  border-radius: 20px;
+  background-color: #fff;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  /* display: flex; */
+
+  width: 100%;
+  padding: 30px 15px;
+
+  margin-right: 3%;
+  align-self: center;
+  box-sizing: border-box;
+  /* padding: 20px 0 20px 100px; */
+}
+.kdwA img {
+  margin-bottom: 12px;
+  max-width: 150px;
+  max-height: 50px;
+}
+.qixG2s {
+  margin-bottom: 8px;
+  font-size: 20px;
+  color: #000;
+  font-weight: 600;
+  display: block;
+  line-height: 24px;
+}
+.qixG2s span {
+  color: #00baf2;
+}
+
+.x1MFf {
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: #000;
+  font-weight: 500;
+  line-height: 16px;
 }
