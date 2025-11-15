@@ -69,7 +69,7 @@ function Home() {
                    
                     <div className="AjDe2">
                         <div className="kdwA">
-                            <img src="https://assetscdn1.paytm.com/images/catalog/view/342367/1725447383123.png" />
+                            <img src="https://assetscdn1.paytm.com/images/catalog/view/342367/1725447383123.png" alt="benner" />
                         </div>
                         
                         <div className="qixG2s">Pay anyone directly from your <span>bank account</span></div>
