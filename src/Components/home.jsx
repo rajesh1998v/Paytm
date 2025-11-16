@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "./footer";
 
 
 function Home() {
@@ -91,13 +92,20 @@ function Home() {
                             <img src="https://assetscdn1.paytm.com/images/catalog/view_item/2834703/1725432129171.png" alt="link"/>
                             <img src="https://assetscdn1.paytm.com/images/catalog/view_item/2834704/1725432148873.png" alt="link2"/>
                         </div>
+                        <div className="Ya3Gs">
+                            <img src="https://assetscdn1.paytm.com/images/catalog/view/1752741641420.png" alt=""/>
+                        </div>
+
+                        
                     </div>
                 </div>
 
+            
 
 
+            </div>
 
-            </div>sss
+            <Footer/>
 
         </div>
     )
