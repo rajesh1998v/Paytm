@@ -1,4 +1,5 @@
 import React from "react";
+import { Link,useNavigate  } from 'react-router-dom';
 import Footer from "./footer";
 
 
@@ -37,10 +38,10 @@ function Home() {
                                 <img src="https://assetscdn1.paytm.com/images/catalog/view_item/3171059/25654906198636032.png" alt="rech" />
                                 <span>Metro Recharge</span>
                             </div>
-                            <div className="a5Bdew">
+                            <Link className="a5Bdew" to="/city">
                                 <img src="https://assetscdn1.paytm.com/images/catalog/view_item/2839929/17630252264344684.png" alt="rech" />
                                 <span>City Bus Tikets</span>
-                            </div>
+                            </Link>
                             <div className="a5Bdew">
                                 <img src="https://assetscdn1.paytm.com/images/catalog/view_item/2839932/17630339117612605.png" alt="rech" />
                                 <span>View All Products</span>

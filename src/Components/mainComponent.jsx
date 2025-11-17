@@ -12,8 +12,8 @@ function mainComponent(){
             <Routes>
 
             <Route path="/city" element={<City/>}/>
-            <Route path="/home" element={<Home/>}/>
-            <Route path="/" element={<Navigate replace to="/home"/>}  />
+            <Route path="/" element={<Home/>}/>
+            <Route path="/" element={<Navigate replace to="/"/>}  />
  
             </Routes>
         </>

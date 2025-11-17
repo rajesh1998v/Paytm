@@ -85,6 +85,7 @@ textarea {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  text-decoration: none;
 }
 
 .a5Bdew img {
@@ -280,9 +281,9 @@ textarea {
 /* ============================================================ */
 
 .Swd3w {
-  font-size: 24px;
+  font-size: 22px;
   color: #000;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .z8dkuh {
@@ -294,17 +295,26 @@ textarea {
 }
 
 .poxs3a img {
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
-  background-color: #000;
+  border-radius: 25px;
+  background-color: #fff;
 }
 
 .wa2kns {
-  margin-left: 15px;
+  margin-left: 18px;
   flex: 1;
   border-bottom: 1px solid #e5e5e5;
-  padding: 15px 0;
+  padding: 18px 0;
   font-size: 14px;
   font-weight: 500;
+}
+.wa2kns span{
+  background-color: #26A66A;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 6px;
+  font-size: 12px;
 }
