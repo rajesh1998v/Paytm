@@ -11,7 +11,11 @@ function City() {
                         <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                     </svg>
                 </Link>
-                <div className="Khcd2w">Buys City Bus Ticket</div>
+                <div className="Khcd2w">
+                    <div>Buys City Bus Ticket</div> 
+                    <div className="x2fSe"> Surat
+                    </div> 
+                </div>
             </div>
 
             <div className="Swd3w px-3">Select your City</div>
