@@ -1,5 +1,6 @@
 import React from "react";
 import { Link  } from 'react-router-dom';
+import Navbars from "./navbars";
 import Footer from "./footer";
 
 
@@ -9,6 +10,7 @@ function Home() {
 
     return (
         <div className="">
+            <Navbars/>
             <div className="Zsef23">
                 <div className="Sdefx">
                     <div className="qYn3s">

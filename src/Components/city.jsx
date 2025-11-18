@@ -17,7 +17,7 @@ function City() {
             <div className="Swd3w px-3">Select your City</div>
 
 
-            <div className="mt-1">
+            <div className="mt-2">
                 <div className="z8dkuh">
                     <div className="poxs3a">
                         <img src="https://res.cloudinary.com/dnysmjaoi/image/upload/v1763401679/Screenshot_20251117_230225_Paytm_i3jlny.jpg" alt="" />
