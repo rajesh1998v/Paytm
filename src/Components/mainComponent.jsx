@@ -4,13 +4,15 @@ import "../assets/styles/App.css";
 import Navbar from "./navbars"
 import Home from "./home";
 import City from "./city";
+import BookForm from "./bookForm";
 function mainComponent(){
 
     return(
         <>
-            <Navbar/>
+            {/* <Navbar/> */}
             <Routes>
 
+            <Route path="/station" element={<BookForm/>}/>
             <Route path="/city" element={<City/>}/>
             <Route path="/" element={<Home/>}/>
             <Route path="/" element={<Navigate replace to="/"/>}  />

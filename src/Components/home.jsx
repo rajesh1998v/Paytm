@@ -40,7 +40,7 @@ function Home() {
                             </div>
                             <Link className="a5Bdew" to="/city">
                                 <img src="https://assetscdn1.paytm.com/images/catalog/view_item/2839929/17630252264344684.png" alt="rech" />
-                                <span>City Bus Tikets</span>
+                                <span>City Bus Tickets</span>
                             </Link>
                             <div className="a5Bdew">
                                 <img src="https://assetscdn1.paytm.com/images/catalog/view_item/2839932/17630339117612605.png" alt="rech" />

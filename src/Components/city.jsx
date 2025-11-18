@@ -4,7 +4,7 @@ import { Link  } from 'react-router-dom';
 function City() {
 
     return (
-        <div className="">
+        <div className="mt-5">
             <div className="my-3 px-3">
                 <Link className="text-dark" to="/">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width={20} class="">
@@ -36,12 +36,12 @@ function City() {
                     </div>
                     <div className="wa2kns">Nashik</div>
                 </div>
-                <div className="z8dkuh">
+                <Link className="z8dkuh" to="/station">
                     <div className="poxs3a">
                         <img src="https://res.cloudinary.com/dnysmjaoi/image/upload/v1763404661/Screenshot_20251117_230405_Paytm_yxmysf.jpg" alt="" />
                     </div>
                     <div className="wa2kns">Surat <span>Newly Added</span></div>
-                </div>
+                </Link>
                 <div className="z8dkuh">
                     <div className="poxs3a">
                         <img src="https://res.cloudinary.com/dnysmjaoi/image/upload/v1763404660/Screenshot_20251117_230442_Paytm_c6iqq1.jpg" alt="" />
