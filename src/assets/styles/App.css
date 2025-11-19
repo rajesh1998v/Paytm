@@ -352,9 +352,15 @@ textarea {
 }
 
 /* ----Form ---------- */
+.Lkdj3e{
+  border: 1px solid rgb(206, 202, 202);
+  padding: 0px 14px;
+  margin: 16px;
+  border-radius: 14px;
+}
 .input-container {
   position: relative;
-  margin: 20px 0;
+  margin: 15px 0;
   width: 100%;
 }
 .input-field {
@@ -370,7 +376,7 @@ textarea {
 .input-label {
   position: absolute;
   left: 8px;
-  top:13px;
+  top:12px;
   font-size: 16px;
   color: #686969;
   background: white;

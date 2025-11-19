@@ -53,7 +53,7 @@ function City() {
 
             <div className="Khcd2w">Buy New Ticket</div>
 
-            <div className="px-3">
+            <div className="Lkdj3e">
                 <div style={{position: "relative" }}>
                     <div className="input-container">
                         <input type="text" className="input-field" placeholder=" "value={value}onChange={handleChange}/>
@@ -67,6 +67,16 @@ function City() {
                                 ))}
                             </ul>
                         )}
+                    </div>
+                    <div className="input-container">
+                        <input type="text" className="input-field" placeholder=" "value={value}onChange={handleChange}/>
+                        <label className="input-label">From</label>
+                        
+                    </div>
+                    <div className="input-container">
+                        <input type="text" className="input-field" placeholder=" "value="1 Adult" onChange={handleChange}/>
+                        <label className="input-label">Passenger</label>
+                       
                     </div>
 
                 </div>
