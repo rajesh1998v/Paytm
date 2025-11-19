@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 
 function City() {
@@ -28,8 +28,8 @@ function City() {
 
 
     return (
-        <div className="">
-            <div className="KdsWe3 px-3">
+        <div className="p14">
+            <div className="KdsWe3">
                 <div className="d-flex">
                     <Link className="text-dark" to="/city">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width={20} class="">
@@ -51,12 +51,12 @@ function City() {
                 <div className="kHgd4s">Help</div>
             </div>
 
-            <div className="Khcd2w">Buy New Ticket</div>
+            <div className="Khcd2w m-0">Buy New Ticket</div>
 
             <div className="Lkdj3e">
-                <div style={{position: "relative" }}>
+                <div style={{ position: "relative" }}>
                     <div className="input-container">
-                        <input type="text" className="input-field" placeholder=" "value={value}onChange={handleChange}/>
+                        <input type="text" className="input-field" placeholder=" " value={value} onChange={handleChange} />
                         <label className="input-label">From</label>
                         {filtered.length > 0 && (
                             <ul className="suggestion-box">
@@ -69,14 +69,24 @@ function City() {
                         )}
                     </div>
                     <div className="input-container">
-                        <input type="text" className="input-field" placeholder=" "value={value}onChange={handleChange}/>
-                        <label className="input-label">From</label>
-                        
+                        <input type="text" className="input-field" placeholder=" " value={value} onChange={handleChange} />
+                        <label className="input-label">To</label>
+
                     </div>
                     <div className="input-container">
-                        <input type="text" className="input-field" placeholder=" "value="1 Adult" onChange={handleChange}/>
+                        <input type="text" className="input-field" placeholder=" " value="1 Adult" onChange={handleChange} />
                         <label className="input-label">Passenger</label>
-                       
+
+                    </div>
+
+                    <div className="s2oGtk">
+                        <button >Buy Ticket</button>
+                    </div>
+                    <div className="kHgT7j">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width={18} class="mb-1">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
+                        </svg>
+                        <span className="px-1">All bus tickets will be vaild for 2 hours post booking</span>
                     </div>
 
                 </div>
