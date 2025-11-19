@@ -12,8 +12,8 @@ function City() {
         const newValue = e.target.value;
         const matches = data.filter((item) =>
             item.toLowerCase().startsWith(newValue.toLowerCase())
-        );
-        if (matches.length === 0 && newValue == "") {
+        )
+        if(matches.length === 0 && newValue == "") {
             return;
         }
         setValue(newValue);
