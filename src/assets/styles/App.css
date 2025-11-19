@@ -330,6 +330,45 @@ textarea {
   justify-content: space-between;
   margin: 48px 0 16px 0;
 }
+
+.Kjf5Dx{
+  width: 100%;
+  border: 1px solid rgb(206, 202, 202);
+  display: flex;
+  padding: 16px;
+  border-radius: 10px;
+  justify-content: space-between;
+  margin: 22px 0;
+}
+
+.Kjuh-left{
+  max-width: 60%; /* important */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.Kjuh-left .pgr4e{
+  font-size: 12px;
+  color: #807e7e;
+}
+.Kjuh-left .HysD7G{
+  font-size: 16px;
+  font-weight: 500;
+  padding-top: 10px;
+  line-height: 14px;
+}
+.Kjuh-right{
+  /* width: 22%; */
+}
+.Kjuh-right button{
+  border: 1px solid #00A8FF;
+  color: #00A8FF;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 8px 30px;
+  font-weight: 500;
+}
+
 .Khcd2w{
   font-size: 18px;
   color: #000;
@@ -417,7 +456,7 @@ textarea {
 }
 .s2oGtk{
   width: 100%;
-  margin: 16px 0;
+  margin: 14px 0;
 
 }
 .s2oGtk button{
@@ -429,10 +468,14 @@ textarea {
   font-size: 14px;
   color: #bebaba;
   margin-top: 14px;
+  /* background-color: #00A8FF; */
 
 }
 .kHgT7j{
-  color: #b1afaf;
-  font-size: 10px;
-  padding-bottom: 16px;
+  color: #8f8d8d;
+  font-size: 12px;
+  padding-bottom: 14px;
+}
+.p2{
+  margin-bottom: 2px;
 }

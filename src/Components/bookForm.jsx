@@ -51,6 +51,35 @@ function City() {
                 <div className="kHgd4s">Help</div>
             </div>
 
+            <div className="d-flex justify-content-between">
+                <div className="Khcd2w m-0">Recent Orders</div>
+                <div className="kHgd4s m-0">View All</div>
+            </div>
+
+            <div className="Kjf5Dx">
+                <div className="Kjuh-left">
+                    <div className="pgr4e">1 Adult Ticket</div>
+                    <div className="d-flex mt-1 ">
+                        <div className="HysD7G">Simada Nature </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width={16} class="mx-2 mt-2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                            </svg>
+
+                        </div>
+                        <div className="HysD7G">S.M.V.S. Swasnndnsk</div>
+                    </div>
+
+                </div>
+                <div className="Kjuh-right">
+                    <button>Buy 4</button>
+                </div>
+            </div>
+
+
+            <div>
+
+            </div>
             <div className="Khcd2w m-0">Buy New Ticket</div>
 
             <div className="Lkdj3e">
@@ -83,7 +112,7 @@ function City() {
                         <button >Buy Ticket</button>
                     </div>
                     <div className="kHgT7j">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width={14} class="mb-">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width={15} class="p2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
                         </svg>
                         <span className="px-1">All bus tickets will be vaild for 2 hours post booking</span>
