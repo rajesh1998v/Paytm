@@ -352,7 +352,7 @@ textarea {
   color: #807e7e;
 }
 .Kjuh-left .HysD7G{
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   padding-top: 10px;
   line-height: 14px;
@@ -361,12 +361,13 @@ textarea {
   /* width: 22%; */
 }
 .Kjuh-right button{
-  border: 1px solid #00A8FF;
-  color: #00A8FF;
+  border: 1px solid #00baf2;
+  color: #00baf2;
   background-color: #fff;
   border-radius: 20px;
-  padding: 8px 30px;
+  padding: 8px 35px;
   font-weight: 500;
+  font-size: 12px;
 }
 
 .Khcd2w{

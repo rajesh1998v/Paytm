@@ -72,7 +72,7 @@ function City() {
 
                 </div>
                 <div className="Kjuh-right">
-                    <button>Buy 4</button>
+                    <button>Buy &#x20B9; 4</button>
                 </div>
             </div>
 
