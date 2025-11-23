@@ -55,7 +55,7 @@ function Ticket() {
             <div className="fGt6V">
                 <div className="Kuj6d">
                     <div className="KjBy6">
-                        <img src="http://recruitment.sitilink.in/img/sitilink.png" alt="" />
+                        <img src="https://res.cloudinary.com/dnysmjaoi/image/upload/v1763893728/sitilink_yhzs9y.png" alt="" />
                     </div>
                 </div>
 
