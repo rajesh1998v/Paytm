@@ -349,7 +349,7 @@ textarea {
 }
 .pgr4e{
   font-size: 12px;
-  color: #807e7e;
+  color: #807e7e !important;
 }
 .Kjuh-left .HysD7G{
   font-size: 14px;
@@ -552,25 +552,22 @@ textarea {
 }
 .zAsw3{
   display: flex;
-  width: 60px;
-  height: 40px;
+  width: 66px;
+  height: 42px;
   border-radius: 20px;
   background-color: #fff;
   overflow: hidden;
   text-align: center;
-  padding-top: 4px;
+  padding-top: 5px;
 }
 .zAsw3 img{
-  width: 63%;
+  width: 65%;
   height: 40px;
   
 }
-.font22{
-  font-size: 36px;
+.font38{
+  font-size: 38px;
   font-weight: 500;
-}
-.font10{
-  font-size: 14px;
 }
 
 .dota{
@@ -578,11 +575,19 @@ textarea {
 }
 .font14{
   font-size: 14px;
+  color: #000;
 }
 .font12{
   font-size: 12px;
+  color: #383737;
 }
 .font16{
   font-size: 22px;
   font-weight: 500;
+}
+.Kuj6g{
+  background-color: #fff;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px 14px; 
 }
