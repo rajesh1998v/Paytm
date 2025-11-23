@@ -7,6 +7,8 @@ import City from "./city";
 import BookForm from "./bookForm";
 import Ticket from "./ticket";
 import ViewTicket from "./viewTicket";
+import Ticket2 from "./ticket2";
+import ViewTicket2 from "./viewTickect2";
 function mainComponent(){
 
     return(
@@ -14,6 +16,8 @@ function mainComponent(){
             {/* <Navbar/> */}
             <Routes>
 
+            <Route path="/viewticket2" element={<ViewTicket2/>}/>
+            <Route path="/ticket2" element={<Ticket2/>}/>
             <Route path="/viewticket" element={<ViewTicket/>}/>
             <Route path="/ticket" element={<Ticket/>}/>
             <Route path="/station" element={<BookForm/>}/>

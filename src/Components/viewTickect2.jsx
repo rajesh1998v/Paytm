@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 
-function ViewTicket() {
+function ViewTicket2() {
 
     const [time, setTime] = useState({ hours: 1, minutes: 32, seconds: 15 });
 
@@ -58,13 +58,13 @@ function ViewTicket() {
             </div>
 
             <div className="khFr4 d-flex">
-                <div className="texts">Maqob Parvat Khadi Bridge BRTS</div>
+                <div className="texts">Amazia Amusement Park Brts</div>
                 <div className="px-1">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width={16} class="mx-1">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                     </svg>
                 </div>
-                <div className="texts">Mangal Pandey Hall Brts</div>
+                <div className="texts">Prajapita Brahmakumari Marg Brts</div>
 
             </div>
             <div className="text-center my-4">Scan this QR at Entry & Exit Points</div>
@@ -132,4 +132,4 @@ function ViewTicket() {
     )
 }
 
-export default ViewTicket;
+export default ViewTicket2;

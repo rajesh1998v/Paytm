@@ -31,6 +31,9 @@ function City() {
     const handleTicket=()=>{
         navigate("/ticket");
     }
+    const handleTicket2=()=>{
+        navigate("/ticket2");
+    }
 
 
     return (
@@ -66,38 +69,38 @@ function City() {
                 <div className="Kjuh-left">
                     <div className="pgr4e">1 Adult Ticket</div>
                     <div className="d-flex mt-1 ">
-                        <div className="HysD7G">Simada Nature </div>
+                        <div className="HysD7G">Maqob Parvat Khadi Bridge BRTS</div>
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width={16} class="mx-2 mt-2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                             </svg>
 
                         </div>
-                        <div className="HysD7G">S.M.V.S. Swasnndnsk</div>
+                        <div className="HysD7G">Mangal Pandey Hall Brts</div>
                     </div>
 
                 </div>
                 <div className="Kjuh-right">
-                    <button>Buy &#x20B9; 4</button>
+                    <button onClick={()=>handleTicket()}>Buy &#x20B9; 4</button>
                 </div>
             </div>
             <div className="Kjf5Dx">
                 <div className="Kjuh-left">
                     <div className="pgr4e">1 Adult Ticket</div>
                     <div className="d-flex mt-1 ">
-                        <div className="HysD7G">Simada Nature </div>
+                        <div className="HysD7G">Amazia Amusement Park Brts</div>
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width={16} class="mx-2 mt-2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                             </svg>
 
                         </div>
-                        <div className="HysD7G">S.M.V.S. Swasnndnsk</div>
+                        <div className="HysD7G">Prajapita Brahmakumari Marg Brts</div>
                     </div>
 
                 </div>
                 <div className="Kjuh-right">
-                    <button>Buy &#x20B9; 4</button>
+                    <button onClick={()=>handleTicket2()}>Buy &#x20B9; 4</button>
                 </div>
             </div>
 
@@ -134,7 +137,7 @@ function City() {
                     </div>
 
                     <div className="s2oGtk">
-                        <button onClick={()=>handleTicket()}>Buy Ticket</button>
+                        <button>Buy Ticket</button>
                     </div>
                     <div className="kHgT7j">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width={15} class="p2">
