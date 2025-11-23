@@ -552,21 +552,21 @@ textarea {
 }
 .zAsw3{
   display: flex;
-  width: 70px;
+  width: 60px;
   height: 40px;
   border-radius: 20px;
   background-color: #fff;
   overflow: hidden;
   text-align: center;
-  padding-top: 3px;
+  padding-top: 4px;
 }
 .zAsw3 img{
-  width: 62%;
+  width: 63%;
   height: 40px;
   
 }
 .font22{
-  font-size: 30px;
+  font-size: 36px;
   font-weight: 500;
 }
 .font10{
@@ -578,4 +578,11 @@ textarea {
 }
 .font14{
   font-size: 14px;
+}
+.font12{
+  font-size: 12px;
+}
+.font16{
+  font-size: 22px;
+  font-weight: 500;
 }

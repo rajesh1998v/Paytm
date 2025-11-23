@@ -41,19 +41,19 @@ function Ticket() {
                 <div className="Kuj6d">
                     <div className="zAsw3">
                         <img src="https://res.cloudinary.com/dnysmjaoi/image/upload/v1763884053/ChatGPT_Image_Nov_23_2025_01_16_30_PM_ewvdev.png" alt="" />
-                        <div>1</div>
+                        <div className="font16">1</div>
                     </div>
                 </div>
 
                 <div className="text-center mt-1 font22">
                     <span>&#x20B9;</span>
                     <span>4</span>
-                    <img className="mb-1 mx-1" width={35} src="https://res.cloudinary.com/dnysmjaoi/image/upload/v1763885750/ChatGPT_Image_Nov_23_2025_01_45_28_PM_yc9dek.png" alt="" />
+                    <img className="mb-1 mx-1" width={38} src="https://res.cloudinary.com/dnysmjaoi/image/upload/v1763885750/ChatGPT_Image_Nov_23_2025_01_45_28_PM_yc9dek.png" alt="" />
                     
                 </div>
-                <div className="text-center">TICKET BOOKED SUCCESSFULLY</div>
+                <div className="text-center font14">TICKET BOOKED SUCCESSFULLY</div>
                 <div className="text-center my-3 font10">
-                    <span>22 Nov 2025, 12:45 AM</span>
+                    <span className="font12">22 Nov 2025, 12:45 AM</span>
                 </div>
 
                 <div className="dota"></div>
