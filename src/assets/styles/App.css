@@ -510,8 +510,12 @@ textarea {
   margin-top: -4px;
 }
 .fGt6V{
-  background-color: #d8d8d8;
+  background-color: #e2f8f6;
   border-radius: 10px;
+  margin: 1px 0;
+  overflow: hidden;
+}
+.pding12{
   padding: 12px;
 }
 .Kuj6d{
@@ -527,7 +531,7 @@ textarea {
   border-radius: 50%;
   padding: 8px;
   background-color: #fff;
-   
+  margin-top: 4px;
 }
 .KjBy6 img{
   margin-top: 18px;
@@ -539,6 +543,7 @@ textarea {
   display: flex;
   align-items: center;
   max-width: 100%;
+  margin-top: 4px;
 }
 
 .texts{
@@ -591,11 +596,11 @@ textarea {
   background-color: #fff;
   border-radius: 8px;
   text-align: center;
-  padding: 10px 14px; 
+  padding: 14px; 
 }
 
 .Jh7gt3{
   width: 100%!important;
-  padding: 10px!important;
+  padding: 14px 0!important;
   font-size: 14px!important;
 }

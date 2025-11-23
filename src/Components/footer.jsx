@@ -75,9 +75,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className="dJXTa">
-
-      </div>
+      <div className="dJXTa"></div>
     </div>
   )
 
