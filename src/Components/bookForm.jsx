@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link,useNavigate  } from 'react-router-dom';
-import Ticket from "./ticket";
+// import Ticket from "./ticket";
 
 function City() {
 

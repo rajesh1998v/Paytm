@@ -5,28 +5,7 @@ function Ticket() {
 
     const data = ["Mumbai", "Delhi", "Pune", "Jaipur", "Kolkata", "Kolkata", "Bangalore", "Bangalore", "Bangalore",];
 
-    const [value, setValue] = useState("");
-    const [filtered, setFiltered] = useState([]);
-
-    const handleChange = (e) => {
-        const newValue = e.target.value;
-        const matches = data.filter((item) =>
-            item.toLowerCase().startsWith(newValue.toLowerCase())
-        )
-        // if(matches.length === 0 && newValue == "") {
-        //     return;
-        // }
-        setValue(newValue);
-        setFiltered(newValue ? matches : []);
-    };
-
-    const handleSelect = (item) => {
-        setValue(item);
-        setFiltered([]);
-    };
-
-
-
+    
     return (
         <div className="p14">
             <div className="KdsWe3">
