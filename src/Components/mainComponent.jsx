@@ -5,6 +5,8 @@ import "../assets/styles/App.css";
 import Home from "./home";
 import City from "./city";
 import BookForm from "./bookForm";
+import Ticket from "./ticket";
+import ViewTicket from "./viewTicket";
 function mainComponent(){
 
     return(
@@ -12,6 +14,8 @@ function mainComponent(){
             {/* <Navbar/> */}
             <Routes>
 
+            <Route path="/viewticket" element={<ViewTicket/>}/>
+            <Route path="/ticket" element={<Ticket/>}/>
             <Route path="/station" element={<BookForm/>}/>
             <Route path="/city" element={<City/>}/>
             <Route path="/" element={<Home/>}/>

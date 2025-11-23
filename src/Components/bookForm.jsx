@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link,useNavigate  } from 'react-router-dom';
+import Ticket from "./ticket";
 
 function City() {
 
@@ -25,6 +26,11 @@ function City() {
         setFiltered([]);
     };
 
+    const navigate = useNavigate();
+
+    const handleTicket=()=>{
+        navigate("/ticket");
+    }
 
 
     return (
@@ -128,7 +134,7 @@ function City() {
                     </div>
 
                     <div className="s2oGtk">
-                        <button >Buy Ticket</button>
+                        <button onClick={()=>handleTicket()}>Buy Ticket</button>
                     </div>
                     <div className="kHgT7j">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width={15} class="p2">

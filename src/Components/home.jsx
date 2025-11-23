@@ -34,7 +34,7 @@ function Home() {
                             </div>
                             <div className="a5Bdew">
                                 <img src="https://assetscdn1.paytm.com/images/catalog/view_item/3171058/25654802470500577.png" alt="rech" />
-                                <span>Mobile Recharge</span>
+                                <span>Loan EMI Payment</span>
                             </div>
                             <div className="a5Bdew">
                                 <img src="https://assetscdn1.paytm.com/images/catalog/view_item/3171059/25654906198636032.png" alt="rech" />
