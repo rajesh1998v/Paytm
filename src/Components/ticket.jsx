@@ -84,7 +84,7 @@ function Ticket() {
 
                     <div className="text-center my-2 font38">
                         <span>&#x20B9;</span>
-                        <span>4</span>
+                        <span>8</span>
                         <img className="mb-1 mx-1" width={48} src="https://res.cloudinary.com/dnysmjaoi/image/upload/v1763885750/ChatGPT_Image_Nov_23_2025_01_45_28_PM_yc9dek.png" alt="" />
 
                     </div>

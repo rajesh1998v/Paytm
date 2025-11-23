@@ -81,7 +81,7 @@ function City() {
 
                 </div>
                 <div className="Kjuh-right">
-                    <button onClick={()=>handleTicket()}>Buy &#x20B9; 4</button>
+                    <button onClick={()=>handleTicket()}>Buy &#x20B9; 8</button>
                 </div>
             </div>
             <div className="Kjf5Dx">
@@ -100,7 +100,7 @@ function City() {
 
                 </div>
                 <div className="Kjuh-right">
-                    <button onClick={()=>handleTicket2()}>Buy &#x20B9; 4</button>
+                    <button onClick={()=>handleTicket2()}>Buy &#x20B9; 8</button>
                 </div>
             </div>
 
