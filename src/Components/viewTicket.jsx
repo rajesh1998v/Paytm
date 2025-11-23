@@ -1,9 +1,9 @@
-import React,{ useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 
 function ViewTicket() {
 
- const [time, setTime] = useState({ hours: 1, minutes: 32, seconds: 15 });
+    const [time, setTime] = useState({ hours: 1, minutes: 32, seconds: 15 });
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -73,29 +73,54 @@ function ViewTicket() {
                 <img src="https://res.cloudinary.com/dnysmjaoi/image/upload/v1763915496/downloadqr_hr9hd0.png" alt="" />
             </div>
 
-             <div className="px-2 py-3">
-                        <div className="Kuj6g">
-                            <div className="font14">Your ticket is valid for</div>
-                            <div className="d-flex my-2 justify-content-center">
-                                <div>
-                                    <div className="font38">{String(time.hours).padStart(2, "0")}</div>
-                                    <div className="font12 mt-1">HOURS</div>
-                                </div>
-                                <span className="font38">:</span>
-                                <div>
-                                    <div className="font38">{String(time.minutes).padStart(2, "0")}</div>
-                                    <div className="font12 mt-1">MINUTES</div>
-                                </div>
-                                <span className="font38">:</span>
-                                <div>
-                                    <div className="font38">{String(time.seconds).padStart(2, "0")}</div>
-                                    <div className="font12 mt-1">SECONDS</div>
-                                </div>
-                            </div>
-                           
+            <div className="px-2 py-3">
+                <div className="Kuj6g">
+                    <div className="font14">Your ticket is valid for</div>
+                    <div className="d-flex my-2 justify-content-center">
+                        <div>
+                            <div className="font38">{String(time.hours).padStart(2, "0")}</div>
+                            <div className="font12 mt-1">HOURS</div>
                         </div>
-
+                        <span className="font38">:</span>
+                        <div>
+                            <div className="font38">{String(time.minutes).padStart(2, "0")}</div>
+                            <div className="font12 mt-1">MINUTES</div>
+                        </div>
+                        <span className="font38">:</span>
+                        <div>
+                            <div className="font38">{String(time.seconds).padStart(2, "0")}</div>
+                            <div className="font12 mt-1">SECONDS</div>
+                        </div>
                     </div>
+
+                </div>
+                <div className="jYg5f">
+                    <div className="JhYu3 pt-0 pb-2 ">
+                        <div className="font16">Ticket Details</div>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width={18} class="">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                            </svg>
+                    </div>
+
+                    <div className="JhYu3  bord">
+                        <div>Issued On</div>
+                        <div>21 Nov 2025, 10:49 AM</div>
+                    </div>
+                    <div className="JhYu3 bord">
+                        <div>Order ID</div>
+                        <div>26243209596</div>
+                    </div>
+                    <div className="JhYu3 bord">
+                        <div>Order Iten ID</div>
+                        <div>2703936236</div>
+                    </div>
+                    <div className="JhYu3 bord border-0 ">
+                        <div>Ticket Type</div>
+                        <div>1 Adult</div>
+                    </div>
+                </div>
+
+            </div>
 
 
 
