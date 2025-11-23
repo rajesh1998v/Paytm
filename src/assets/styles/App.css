@@ -328,7 +328,7 @@ textarea {
 .KdsWe3{
   display: flex;
   justify-content: space-between;
-  margin: 48px 0 16px 0;
+  margin: 48px 0 20px 0;
 }
 
 .Kjf5Dx{
@@ -483,14 +483,14 @@ textarea {
 
 /* ------------------------------------------ */
 .aWk43 {
-  width: 65px;
-  height: 21px;
+  width: 70px;
+  height: 23px;
   overflow: hidden;
 
 }
 
 .aWk43 img{
-  height: 21px;
+  height: 22px;
   display: block;
 
 }
@@ -522,15 +522,15 @@ textarea {
 .KjBy6{
   position: relative;
   border: 1px solid rgb(209, 206, 206);
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  padding: 6px 6px;
+  padding: 8px;
   background-color: #fff;
    
 }
 .KjBy6 img{
-  margin-top: 10px;
+  margin-top: 18px;
   width: 100%;
   object-fit: contain;
 }
@@ -547,27 +547,35 @@ textarea {
   text-overflow: ellipsis;
   min-width: 0;
   flex: 1;
+  font-size: 24px;
+  font-weight: 500;
 }
 .zAsw3{
   display: flex;
-  width: 50px;
-  height: 30px;
+  width: 70px;
+  height: 40px;
   border-radius: 20px;
   background-color: #fff;
   overflow: hidden;
   text-align: center;
-  padding-top: 2px;
+  padding-top: 3px;
 }
 .zAsw3 img{
-  width: 64%;
-  height: 30px;
+  width: 62%;
+  height: 40px;
   
 }
-.font14{
-  font-size: 22px;
+.font22{
+  font-size: 30px;
   font-weight: 500;
 }
 .font10{
   font-size: 14px;
 }
 
+.dota{
+  border: 1px dotted rgb(158, 156, 156);
+}
+.font14{
+  font-size: 14px;
+}
