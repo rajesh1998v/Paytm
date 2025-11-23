@@ -497,17 +497,19 @@ textarea {
 
 /* ==================================== */
 .aWk4q {
-  width: 40px;
-  height: 40px;
-  border-radius: 40px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
   overflow: hidden;
-  /* margin: 0 auto; */
-  /* padding: 2px; */
+  background-color: #e0f0f5;
+  margin-top: -14px;
+  margin-left: 12px;
 }
 .aWk4q img{
-  width: 123%;
-  margin-left: -4px;
-  margin-top: -4px;
+  width: 100%;
+  height: 55px;
+  /* padding: 4px 0; */
+  margin-top: 2px;
 }
 .fGt6V{
   background-color: #e2f8f6;
@@ -588,9 +590,12 @@ textarea {
   color: #383737;
   font-weight: 500;
 }
-.font16{
+.font22{
   font-size: 22px;
   font-weight: 500;
+}
+.font16{
+  font-size: 20px;
 }
 .Kuj6g{
   background-color: #fff;

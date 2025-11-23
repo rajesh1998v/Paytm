@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 
 function Ticket() {
     const [time, setTime] = useState({ hours: 1, minutes: 32, seconds: 15 });
@@ -36,6 +36,11 @@ function Ticket() {
         return () => clearInterval(timer);
     }, []);
 
+    const navigate = useNavigate();
+    const viewTicket=()=>{
+        navigate("/viewticket");
+    }
+
     return (
         <div className="p14">
             <div className="KdsWe3">
@@ -63,7 +68,7 @@ function Ticket() {
                     <div className="khFr4 d-flex">
                         <div className="texts">Kharwarn kumar ddds</div>
                         <div className="px-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width={10} class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width={14} class="mx-1">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                             </svg>
                         </div>
@@ -73,7 +78,7 @@ function Ticket() {
                     <div className="Kuj6d">
                         <div className="zAsw3">
                             <img src="https://res.cloudinary.com/dnysmjaoi/image/upload/v1763884053/ChatGPT_Image_Nov_23_2025_01_16_30_PM_ewvdev.png" alt="" />
-                            <div className="font16">1</div>
+                            <div className="font22">1</div>
                         </div>
                     </div>
 
@@ -110,7 +115,7 @@ function Ticket() {
                                 </div>
                             </div>
                             <div className="py-2">
-                                <button className="btn btn-primary Jh7gt3">View your Tickets</button>
+                                <button className="btn btn-primary Jh7gt3" onClick={()=>viewTicket()}>View your Tickets</button>
                             </div>
                         </div>
 
