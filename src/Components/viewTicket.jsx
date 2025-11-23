@@ -79,17 +79,17 @@ function ViewTicket() {
                             <div className="d-flex my-2 justify-content-center">
                                 <div>
                                     <div className="font38">{String(time.hours).padStart(2, "0")}</div>
-                                    <div className="font12">HOURS</div>
+                                    <div className="font12 mt-1">HOURS</div>
                                 </div>
                                 <span className="font38">:</span>
                                 <div>
                                     <div className="font38">{String(time.minutes).padStart(2, "0")}</div>
-                                    <div className="font12">MINUTES</div>
+                                    <div className="font12 mt-1">MINUTES</div>
                                 </div>
                                 <span className="font38">:</span>
                                 <div>
                                     <div className="font38">{String(time.seconds).padStart(2, "0")}</div>
-                                    <div className="font12">SECONDS</div>
+                                    <div className="font12 mt-1">SECONDS</div>
                                 </div>
                             </div>
                            
