@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from 'react-router-dom';
 
 function Ticket() {
 
-    const data = ["Mumbai", "Delhi", "Pune", "Jaipur", "Kolkata", "Kolkata", "Bangalore", "Bangalore", "Bangalore",];
-
+    
     
     return (
         <div className="p14">
@@ -50,7 +49,7 @@ function Ticket() {
                     {/* <div>d</div> */}
                     <span>&#x20B9;</span>
                     <span>4</span>
-                    <span></span>
+                    <img className="mb-1" width={27} src="https://res.cloudinary.com/dnysmjaoi/image/upload/v1763885750/ChatGPT_Image_Nov_23_2025_01_45_28_PM_yc9dek.png" alt="" />
                     
                 </div>
                 <div className="text-center">TICKET BOOKED SUCCESSFULLY</div>
