@@ -48,7 +48,7 @@ function Ticket() {
                 <div className="text-center mt-1 font38">
                     <span>&#x20B9;</span>
                     <span>4</span>
-                    <img className="mb-1 mx-1" width={43} src="https://res.cloudinary.com/dnysmjaoi/image/upload/v1763885750/ChatGPT_Image_Nov_23_2025_01_45_28_PM_yc9dek.png" alt="" />
+                    <img className="mb-1 mx-1" width={48} src="https://res.cloudinary.com/dnysmjaoi/image/upload/v1763885750/ChatGPT_Image_Nov_23_2025_01_45_28_PM_yc9dek.png" alt="" />
 
                 </div>
                 <div className="text-center font14">TICKET BOOKED SUCCESSFULLY</div>
@@ -60,7 +60,26 @@ function Ticket() {
 
                 <div className="px-2 py-3">
                     <div className="Kuj6g">
-                        <div>Your ticket is valid for</div>
+                        <div className="font14">Your ticket is valid for</div>
+                        <div className="d-flex my-2 justify-content-center">
+                            <div>
+                                <div className="font38">01</div>
+                                <div className="font12">HOURS</div>
+                            </div>
+                            <span className="font38">:</span>
+                            <div>
+                                <div className="font38">45</div>
+                                <div className="font12">MINUTES</div>
+                            </div>
+                            <span className="font38">:</span>
+                            <div>
+                                <div className="font38">44</div>
+                                <div className="font12">SECONDS</div>
+                            </div>
+                        </div>
+                        <div className="py-2">
+                            <button className="btn btn-primary Jh7gt3">View your Tickets</button>
+                        </div>
                     </div>
 
                 </div>

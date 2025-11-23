@@ -552,22 +552,23 @@ textarea {
 }
 .zAsw3{
   display: flex;
-  width: 66px;
+  width: 70px;
   height: 42px;
   border-radius: 20px;
   background-color: #fff;
   overflow: hidden;
   text-align: center;
-  padding-top: 5px;
+  padding: 5px 4px;
 }
 .zAsw3 img{
-  width: 65%;
+  width: 64%;
   height: 40px;
   
 }
 .font38{
-  font-size: 38px;
+  font-size: 40px;
   font-weight: 500;
+  line-height: 46px;
 }
 
 .dota{
@@ -580,6 +581,7 @@ textarea {
 .font12{
   font-size: 12px;
   color: #383737;
+  font-weight: 500;
 }
 .font16{
   font-size: 22px;
@@ -590,4 +592,9 @@ textarea {
   border-radius: 8px;
   text-align: center;
   padding: 10px 14px; 
+}
+
+.Jh7gt3{
+  padding: 10px 76px!important;
+  font-size: 14px!important;
 }
