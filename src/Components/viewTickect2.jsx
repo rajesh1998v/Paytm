@@ -37,6 +37,10 @@ function ViewTicket2() {
         return () => clearInterval(timer);
     }, []);
 
+const today = new Date();
+    const monthName = today.toLocaleString("en-US", { month: "short" });
+    const day = today.getDate();
+
 
 
     return (
@@ -104,7 +108,7 @@ function ViewTicket2() {
 
                     <div className="JhYu3  bord">
                         <div>Issued On</div>
-                        <div>21 Nov 2025, 10:49 AM</div>
+                        <div>{day} {monthName} 2025, 10:20 AM</div>
                     </div>
                     <div className="JhYu3 bord">
                         <div>Order ID</div>

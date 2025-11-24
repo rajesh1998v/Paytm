@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link,useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Ticket() {
     const [time, setTime] = useState({ hours: 1, minutes: 32, seconds: 15 });
@@ -37,9 +37,13 @@ function Ticket() {
     }, []);
 
     const navigate = useNavigate();
-    const viewTicket=()=>{
+    const viewTicket = () => {
         navigate("/viewticket");
     }
+
+    const today = new Date();
+    const monthName = today.toLocaleString("en-US", { month: "short" });
+    const day = today.getDate();
 
     return (
         <div className="p14">
@@ -90,7 +94,7 @@ function Ticket() {
                     </div>
                     <div className="text-center pb-1 font14">TICKET BOOKED SUCCESSFULLY</div>
                     <div className="text-center my-3 pb-1 font14">
-                        <span className="font12">22 Nov 2025, 12:45 AM</span>
+                        <span className="font12">{day} {monthName} 2025, 08:45 PM</span>
                     </div>
 
                     <div className="dota mb-1"></div>
@@ -115,7 +119,7 @@ function Ticket() {
                                 </div>
                             </div>
                             <div className="py-2">
-                                <button className="btn btn-primary Jh7gt3" onClick={()=>viewTicket()}>View your Tickets</button>
+                                <button className="btn btn-primary Jh7gt3" onClick={() => viewTicket()}>View your Tickets</button>
                             </div>
                         </div>
 

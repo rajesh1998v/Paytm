@@ -41,6 +41,10 @@ function Ticket2() {
         navigate("/viewticket2");
     }
 
+    const today = new Date();
+    const monthName = today.toLocaleString("en-US", { month: "short" });
+    const day = today.getDate();
+
     return (
         <div className="p14">
             <div className="KdsWe3">
@@ -90,7 +94,7 @@ function Ticket2() {
                     </div>
                     <div className="text-center pb-1 font14">TICKET BOOKED SUCCESSFULLY</div>
                     <div className="text-center my-3 pb-1 font14">
-                        <span className="font12">22 Nov 2025, 12:45 AM</span>
+                        <span className="font12">{day} {monthName} 2025, 10:20 AM</span>
                     </div>
 
                     <div className="dota mb-1"></div>
