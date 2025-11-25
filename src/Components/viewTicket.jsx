@@ -1,47 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from 'react-router-dom';
+import TicketTimer from "./ticketTimer";
 
 function ViewTicket() {
 
-    const [time, setTime] = useState({ hours: 1, minutes: 32, seconds: 15 });
-
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setTime(prev => {
-                let { hours, minutes, seconds } = prev;
-
-                if (hours === 0 && minutes === 0 && seconds === 0) {
-                    clearInterval(timer);
-                    return prev;
-                }
-
-                if (seconds > 0) {
-                    seconds -= 1;
-                } else {
-                    if (minutes > 0) {
-                        minutes -= 1;
-                        seconds = 59;
-                    } else {
-                        if (hours > 0) {
-                            hours -= 1;
-                            minutes = 59;
-                            seconds = 59;
-                        }
-                    }
-                }
-
-                return { hours, minutes, seconds };
-            });
-        }, 1000);
-
-        return () => clearInterval(timer);
-    }, []);
-
-    const today = new Date();
-    const monthName = today.toLocaleString("en-US", { month: "short" });
-    const day = today.getDate();
-
-
+ 
     return (
         <div className="p14">
             <div className="KdsWe3">
@@ -79,22 +42,7 @@ function ViewTicket() {
             <div className="px-2 py-3">
                 <div className="Kuj6g">
                     <div className="font14">Your ticket is valid for</div>
-                    <div className="d-flex my-2 justify-content-center">
-                        <div>
-                            <div className="font38">{String(time.hours).padStart(2, "0")}</div>
-                            <div className="font12 mt-1">HOURS</div>
-                        </div>
-                        <span className="font38">:</span>
-                        <div>
-                            <div className="font38">{String(time.minutes).padStart(2, "0")}</div>
-                            <div className="font12 mt-1">MINUTES</div>
-                        </div>
-                        <span className="font38">:</span>
-                        <div>
-                            <div className="font38">{String(time.seconds).padStart(2, "0")}</div>
-                            <div className="font12 mt-1">SECONDS</div>
-                        </div>
-                    </div>
+                    <TicketTimer value="timer"/>
 
                 </div>
                 <div className="jYg5f">
@@ -107,7 +55,7 @@ function ViewTicket() {
 
                     <div className="JhYu3  bord">
                         <div>Issued On</div>
-                        <div>{day} {monthName} 2025, 08:45 PM</div>
+                        <div><TicketTimer /></div>
                     </div>
                     <div className="JhYu3 bord">
                         <div>Order ID</div>

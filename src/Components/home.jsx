@@ -41,7 +41,7 @@ function Home() {
                                 <span>Metro Recharge</span>
                             </div>
                             <Link className="a5Bdew" to="/city">
-                                <img src="https://assetscdn1.paytm.com/images/catalog/view_item/2839929/17630252264344684.png" alt="rech" />
+                                <img src="https://res.cloudinary.com/dnysmjaoi/image/upload/v1764089545/city_bus-min_yhqgti.png" alt="rech" />
                                 <span>City Bus Tickets</span>
                             </Link>
                             <div className="a5Bdew">
