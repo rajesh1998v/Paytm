@@ -1,4 +1,4 @@
-import React, {useRef, useState } from "react";
+import React, {useState } from "react";
 import { Link,useNavigate  } from 'react-router-dom';
 
 // import Ticket from "./ticket";
@@ -10,7 +10,7 @@ function City() {
     const [value, setValue] = useState("");
     const [filtered, setFiltered] = useState([]);
 
-    const topRef = useRef(null);
+    // const topRef = useRef(null);
     const handleChange = (e) => {
         const newValue = e.target.value;
         const matches = data.filter((item) =>
