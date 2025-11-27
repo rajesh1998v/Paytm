@@ -115,11 +115,10 @@ function City() {
 
             <div className="Lkdj3e">
                 <div style={{ position: "relative" }}>
-                    <div ref={topRef}></div>
                     <div className="input-container">
 
-                        {/* <input type="text" className="" placeholder=" " value={value} onChange={handleChange} /> */}
-                        <input type="text" value={value} className="input-field" placeholder="" onChange={handleChange} onClick={() => topRef.current.scrollIntoView({ behavior: "smooth" }) } onFocus={() => topRef.current.scrollIntoView({ behavior: "smooth" }) } />
+                        <input type="text" className="input-field" placeholder=" " value={value} onChange={handleChange} onClick={() => navigate("/inputForm")} />
+                        {/* <input type="text" value={value} className="input-field" placeholder="" onChange={handleChange} onClick={() => topRef.current.scrollIntoView({ behavior: "smooth" }) } onFocus={() => topRef.current.scrollIntoView({ behavior: "smooth" }) } /> */}
                         
                         <label className="input-label">From</label>
                         {filtered.length > 0 && (
