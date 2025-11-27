@@ -28,12 +28,6 @@ function InputForm() {
         setFiltered([]);
     };
 
-    const navigate = useNavigate();
-
-    const handleTicket = () => {
-        navigate("/ticket");
-    }
-
 
 
     return (
@@ -86,7 +80,7 @@ function InputForm() {
 
                 </div>
             </div>
-            <div className="Khcd2w pt-3 p14 m-0">Popular Stops</div>
+            <div className="Khcd2w py-2 p14 m-0">Popular Stops</div>
             <ul className="Ku7Gx">
                 <li>Railway Station Terminal</li>
                 <li>Linear Bus Stop</li>
@@ -97,7 +91,6 @@ function InputForm() {
                 <li>Kinnary Cinema</li>
                 <li>Maan Darwaja</li>
             </ul>
-            <div>ddd</div>
 
 
 
