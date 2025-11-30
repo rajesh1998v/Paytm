@@ -1,32 +1,11 @@
-import React, {useState } from "react";
+import React from "react";
 import { Link,useNavigate  } from 'react-router-dom';
 
 // import Ticket from "./ticket";
 
 function City() {
 
-    const data = ["Mumbai", "Delhi", "Pune", "Jaipur", "Kolkata", "Kolkata", "Bangalore", "Bangalore", "Bangalore",];
-
-    const [value, setValue] = useState("");
-    const [filtered, setFiltered] = useState([]);
-
-    // const topRef = useRef(null);
-    const handleChange = (e) => {
-        const newValue = e.target.value;
-        const matches = data.filter((item) =>
-            item.toLowerCase().startsWith(newValue.toLowerCase())
-        )
-        // if(matches.length === 0 && newValue == "") {
-        //     return;
-        // }
-        setValue(newValue);
-        setFiltered(newValue ? matches : []);
-    };
-
-    const handleSelect = (item) => {
-        setValue(item);
-        setFiltered([]);
-    };
+    
 
     const navigate = useNavigate();
 
@@ -117,28 +96,20 @@ function City() {
                 <div style={{ position: "relative" }}>
                     <div className="input-container">
 
-                        <input type="text" className="input-field" placeholder=" " value={value} onChange={handleChange} onClick={() => navigate("/inputForm")} />
+                        <input type="text" name="from" className="input-field" placeholder=" " value="" onClick={() => navigate("/inputForm")} />
                         {/* <input type="text" value={value} className="input-field" placeholder="" onChange={handleChange} onClick={() => topRef.current.scrollIntoView({ behavior: "smooth" }) } onFocus={() => topRef.current.scrollIntoView({ behavior: "smooth" }) } /> */}
                         
                         <label className="input-label">From</label>
-                        {filtered.length > 0 && (
-                            <ul className="suggestion-box">
-                                {filtered.map((item, i) => (
-                                    <li key={i} onClick={() => handleSelect(item)}>
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
-                        )}
+                        
                     </div>
                     
                     <div className="input-container">
-                        <input type="text" className="input-field" placeholder=" " value={value} onChange={handleChange} />
+                        <input type="text" name="to" className="input-field" placeholder=" " value=""  />
                         <label className="input-label">To</label>
 
                     </div>
                     <div className="input-container">
-                        <input type="text" className="input-field" placeholder=" " value="1 Adult" onChange={handleChange} />
+                        <input type="text" className="input-field" placeholder=" " value="1 Adult"  />
                         <label className="input-label">Passenger</label>
 
                     </div>

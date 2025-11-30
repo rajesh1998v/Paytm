@@ -1,32 +1,82 @@
 import React, { useRef, useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 // import Ticket from "./ticket";
 
 function InputForm() {
 
-    const data = ["Mumbai", "Delhi", "Pune", "Jaipur", "Kolkata", "Kolkata", "Bangalore", "Bangalore", "Bangalore",];
+    const stations = ["Mumbai", "Delhi", "Pune", "Jaipur", "Kolkata", "Kolkata", "Bangalore", "Bangalore", "Bangalore",];
 
-    const [value, setValue] = useState("");
+    const [from, setFrom] = useState("");
+    const [to, setTo] = useState("");
+    const [activeField, setActiveField] = useState(null);
+    const [searchText, setSearchText] = useState("");
     const [filtered, setFiltered] = useState([]);
 
-    const topRef = useRef(null);
-    const handleChange = (e) => {
-        const newValue = e.target.value;
-        const matches = data.filter((item) =>
-            item.toLowerCase().startsWith(newValue.toLowerCase())
-        )
-        // if(matches.length === 0 && newValue == "") {
-        //     return;
-        // }
-        setValue(newValue);
-        setFiltered(newValue ? matches : []);
+    const fromRef = useRef(null);
+    const toRef = useRef(null);
+    const navigate = useNavigate();
+
+    const handleChange = (e, field) => {
+        const value = e.target.value;
+
+        if (field === "from") setFrom(value);
+        if (field === "to") setTo(value);
+
+        setActiveField(field);
+        setSearchText(value);
+        runFilter(value);
+
     };
 
-    const handleSelect = (item) => {
-        setValue(item);
-        setFiltered([]);
+    const runFilter = (value) => {
+        if (value.length >= 3) {
+            const matches = stations.filter((s) =>
+                s.toLowerCase().startsWith(value.toLowerCase())
+            );
+            setFiltered(matches);
+        } else {
+            setFiltered([]);
+        }
     };
+
+
+    const handleFocus = (field) => {
+        setActiveField(field);
+        const value = field === "from" ? from : to;
+        setSearchText(value);
+        runFilter(value);
+    };
+
+
+    const handleSelectStop = (stop) => {
+        if (activeField === "from") {
+            setFrom(stop);
+            setSearchText("");
+            setFiltered([]);
+            setActiveField("to");
+
+            if (toRef.current) {
+                toRef.current.focus();
+            }
+            return;
+        }
+
+        if (activeField === "to") {
+            setTo(stop);
+            setFiltered([]);
+
+            navigate("/ticket", {
+                state: {
+                    from: from,
+                    to: stop,
+                },
+            });
+        }
+    }
+
+    const heading = searchText && searchText.length >= 3 ? "Suggested Stops" : "Popular Stops";
+    const showList = searchText.length >= 3 ? filtered : stations;
 
 
 
@@ -53,26 +103,16 @@ function InputForm() {
 
                 <div className="">
                     <div style={{ position: "relative" }}>
-                        <div ref={topRef}></div>
                         <div className="input-container">
 
                             {/* <input type="text" className="" placeholder=" " value={value} onChange={handleChange} /> */}
-                            <input type="text" value={value} className="input-field" placeholder="" onChange={handleChange} onClick={() => topRef.current.scrollIntoView({ behavior: "smooth" })} onFocus={() => topRef.current.scrollIntoView({ behavior: "smooth" })} />
-
+                            <input ref={fromRef} type="text" value={from} className="input-field" placeholder="" onChange={(e) => handleChange(e, "from")} onFocus={() => handleFocus("from")} />
                             <label className="input-label">From</label>
-                            {filtered.length > 0 && (
-                                <ul className="suggestion-box">
-                                    {filtered.map((item, i) => (
-                                        <li key={i} onClick={() => handleSelect(item)}>
-                                            {item}
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
+
                         </div>
 
                         <div className="input-container">
-                            <input type="text" className="input-field" placeholder=" " value={value} onChange={handleChange} />
+                            <input ref={toRef} type="text" className="input-field" placeholder=" " value={to} onChange={(e) => handleChange(e, "to")} onFocus={() => handleFocus("to")} />
                             <label className="input-label">To</label>
                         </div>
                     </div>
@@ -80,17 +120,30 @@ function InputForm() {
 
                 </div>
             </div>
-            <div className="Khcd2w py-2 p14 m-0">Popular Stops</div>
-            <ul className="Ku7Gx">
+            <div className="Khcd2w py-2 p14 m-0">{heading}</div>
+            {/* <div className="Khcd2w py-2 p14 m-0">Suggested Stops</div> */}
+            {/* <ul >
                 <li>Railway Station Terminal</li>
-                <li>Linear Bus Stop</li>
+                
                 <li>Golden Point</li>
                 <li>Sahara Darwaja</li>
                 <li>Chowk Terminal</li>
                 <li>Kamela Darwaja</li>
                 <li>Kinnary Cinema</li>
                 <li>Maan Darwaja</li>
-            </ul>
+            </ul> */}
+            <div>
+                <ul className="Ku7Gx">
+                    {searchText.length >= 3 && filtered.length === 0 ? (
+                        <p style={{ color: "red", padding: "10px 0" }}>No stops found</p>
+                    ) : (
+                        showList.map((stop) => (
+                            <li key={stop} onClick={() => handleSelectStop(stop)}> {stop}</li>
+                        ))
+                    )}
+                </ul>
+
+            </div>
 
 
 
