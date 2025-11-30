@@ -1,11 +1,12 @@
 import React from "react";
-import { Link,useNavigate  } from 'react-router-dom';
+import { Link,useNavigate,useLocation   } from 'react-router-dom';
 
 // import Ticket from "./ticket";
 
 function City() {
 
-    
+    const location = useLocation();
+  const { from, to } = location.state || {};
 
     const navigate = useNavigate();
 
@@ -96,7 +97,7 @@ function City() {
                 <div style={{ position: "relative" }}>
                     <div className="input-container">
 
-                        <input type="text" name="from" className="input-field" placeholder=" " value="" onClick={() => navigate("/inputForm")} />
+                        <input type="text" value={from} className="input-field" placeholder=" " onClick={() => navigate("/inputForm")} />
                         {/* <input type="text" value={value} className="input-field" placeholder="" onChange={handleChange} onClick={() => topRef.current.scrollIntoView({ behavior: "smooth" }) } onFocus={() => topRef.current.scrollIntoView({ behavior: "smooth" }) } /> */}
                         
                         <label className="input-label">From</label>
@@ -104,7 +105,7 @@ function City() {
                     </div>
                     
                     <div className="input-container">
-                        <input type="text" name="to" className="input-field" placeholder=" " value=""  />
+                        <input type="text" value={to} className="input-field" placeholder=" " />
                         <label className="input-label">To</label>
 
                     </div>
@@ -115,7 +116,12 @@ function City() {
                     </div>
 
                     <div className="s2oGtk">
-                        <button>Buy Ticket</button>
+                        {from&&to?
+                        (<button className="bg-clor">Buy Ticket for <span>&#x20B9;5</span> &#x20B9;4</button>)
+                    :(<button>Buy Ticket</button>)
+                    }
+                        
+                        
                     </div>
                     <div className="kHgT7j">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width={15} class="p2">

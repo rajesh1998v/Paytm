@@ -428,9 +428,13 @@ textarea{
   color: #686969;
   background: white;
   padding: 0 4px;
-  pointer-events: none; /* label click issue fix */
+  pointer-events: none; 
   transition: 0.25s ease;
   font-weight: 500;
+}
+.input-field:focus{
+  outline: 1px solid #00baf2;
+  border: none;
 }
 .input-field:focus + .input-label {
   top: -10px;
@@ -473,8 +477,15 @@ textarea{
   font-size: 14px;
   color: #bebaba;
   margin-top: 14px;
-  /* background-color: #00A8FF; */
 
+}
+.bg-clor{
+  background-color: #00baf2!important;
+  color: #fff!important;
+}
+.bg-clor span{
+  text-decoration: line-through;
+  color: #e9e0e0!important;;
 }
 .kHgT7j{
   color: #8f8d8d;
@@ -641,4 +652,11 @@ textarea{
   font-size: 14px;
   font-weight: 600;
   font-family: "Roboto", sans-serif !important;
+}
+
+.lJ7Fr{
+  font-size: 14px;
+  color: gray;
+  font-weight: 500;
+  line-height: 16px;
 }

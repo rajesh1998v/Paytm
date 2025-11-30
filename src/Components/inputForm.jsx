@@ -1,26 +1,36 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 
 // import Ticket from "./ticket";
 
 function InputForm() {
 
-    const stations = ["Mumbai", "Delhi", "Pune", "Jaipur", "Kolkata", "Kolkata", "Bangalore", "Bangalore", "Bangalore",];
-
+    const stations = ["Railway Station Terminal","Linear Bus Stop","Golden Point","Sahara Darwaja","Chowk Terminal","Kamela Darwaja","Kinnary Cinema","Maan Darwaja"];
     const [from, setFrom] = useState("");
     const [to, setTo] = useState("");
     const [activeField, setActiveField] = useState(null);
     const [searchText, setSearchText] = useState("");
     const [filtered, setFiltered] = useState([]);
+    const [isFromSelected, setIsFromSelected] = useState(false);
 
     const fromRef = useRef(null);
     const toRef = useRef(null);
     const navigate = useNavigate();
 
+    useEffect(() => {
+        if (fromRef.current) {
+            fromRef.current.focus();
+        }
+
+    }, []);
+
     const handleChange = (e, field) => {
         const value = e.target.value;
 
-        if (field === "from") setFrom(value);
+        if (field === "from") {
+            setFrom(value);
+            setIsFromSelected(false);
+        }
         if (field === "to") setTo(value);
 
         setActiveField(field);
@@ -30,10 +40,13 @@ function InputForm() {
     };
 
     const runFilter = (value) => {
+
         if (value.length >= 3) {
             const matches = stations.filter((s) =>
                 s.toLowerCase().startsWith(value.toLowerCase())
             );
+            console.log(matches);
+
             setFiltered(matches);
         } else {
             setFiltered([]);
@@ -48,34 +61,51 @@ function InputForm() {
         runFilter(value);
     };
 
+    const handleToMouseDown = (e) => {
+        if (!isFromSelected) {
+            e.preventDefault();
+            if (fromRef.current) {
+                fromRef.current.focus();
+            }
+        }
+    };
+    const handleToFocus = (e) => {
+        if (!isFromSelected) {
+            e.target.blur();
+            if (fromRef.current) {
+                fromRef.current.focus();
+            }
+            return;
+        }
+        handleFocus("to");
+    };
+
+
 
     const handleSelectStop = (stop) => {
         if (activeField === "from") {
             setFrom(stop);
+            setIsFromSelected(true);
             setSearchText("");
             setFiltered([]);
             setActiveField("to");
 
-            if (toRef.current) {
-                toRef.current.focus();
-            }
+            setTimeout(() => {
+                if (toRef.current) {
+                    toRef.current.focus();
+                }
+            }, 0);
             return;
         }
 
         if (activeField === "to") {
             setTo(stop);
             setFiltered([]);
-
-            navigate("/ticket", {
-                state: {
-                    from: from,
-                    to: stop,
-                },
-            });
+            navigate("/station", { state: { from: from, to: stop, }, });
         }
     }
 
-    const heading = searchText && searchText.length >= 3 ? "Suggested Stops" : "Popular Stops";
+    const heading = filtered.length !== 0 &&searchText.length >= 3 ? "Suggested Stops" :searchText.length >= 3 && filtered.length === 0?"":"Popular Stops";
     const showList = searchText.length >= 3 ? filtered : stations;
 
 
@@ -112,7 +142,7 @@ function InputForm() {
                         </div>
 
                         <div className="input-container">
-                            <input ref={toRef} type="text" className="input-field" placeholder=" " value={to} onChange={(e) => handleChange(e, "to")} onFocus={() => handleFocus("to")} />
+                            <input ref={toRef} type="text" value={to} className="input-field" placeholder="" onChange={(e) => handleChange(e, "to")} onFocus={handleToFocus} onMouseDown={handleToMouseDown} />
                             <label className="input-label">To</label>
                         </div>
                     </div>
@@ -135,10 +165,16 @@ function InputForm() {
             <div>
                 <ul className="Ku7Gx">
                     {searchText.length >= 3 && filtered.length === 0 ? (
-                        <p style={{ color: "red", padding: "10px 0" }}>No stops found</p>
+                        <div className="text-center mt-5 py-3">
+                            <img width={90} src="https://res.cloudinary.com/dnysmjaoi/image/upload/v1764499135/search-min_kphlen.png" alt="" />
+                            <div className="Khcd2w">No stops found</div>
+                            <div className="lJ7Fr mt-2">We could not find any stops</div>
+                            <div className="lJ7Fr">matching your search.</div>
+                        </div>
+
                     ) : (
                         showList.map((stop) => (
-                            <li key={stop} onClick={() => handleSelectStop(stop)}> {stop}</li>
+                            <li key={stop} onClick={() => handleSelectStop(stop)}>{stop}</li>
                         ))
                     )}
                 </ul>
