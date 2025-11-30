@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 function InputForm() {
 
-    const stations = ["Railway Station Terminal","Linear Bus Stop","Golden Point","Sahara Darwaja","Chowk Terminal","Kamela Darwaja","Kinnary Cinema","Maan Darwaja"];
+    const stations = ["Railway Station Terminal", "Linear Bus Stop", "Golden Point", "Sahara Darwaja", "Chowk Terminal", "Kamela Darwaja", "Kinnary Cinema", "Maan Darwaja"];
     const [from, setFrom] = useState("");
     const [to, setTo] = useState("");
     const [activeField, setActiveField] = useState(null);
@@ -105,7 +105,7 @@ function InputForm() {
         }
     }
 
-    const heading = filtered.length !== 0 &&searchText.length >= 3 ? "Suggested Stops" :searchText.length >= 3 && filtered.length === 0?"":"Popular Stops";
+    const heading = filtered.length !== 0 && searchText.length >= 3 ? "Suggested Stops" : searchText.length >= 3 && filtered.length === 0 ? "" : "Popular Stops";
     const showList = searchText.length >= 3 ? filtered : stations;
 
 
@@ -163,21 +163,21 @@ function InputForm() {
                 <li>Maan Darwaja</li>
             </ul> */}
             <div>
-                <ul className="Ku7Gx">
-                    {searchText.length >= 3 && filtered.length === 0 ? (
-                        <div className="text-center mt-5 py-3">
-                            <img width={90} src="https://res.cloudinary.com/dnysmjaoi/image/upload/v1764499135/search-min_kphlen.png" alt="" />
-                            <div className="Khcd2w">No stops found</div>
-                            <div className="lJ7Fr mt-2">We could not find any stops</div>
-                            <div className="lJ7Fr">matching your search.</div>
-                        </div>
+                {searchText.length >= 3 && filtered.length === 0 ? (
+                    <div className="text-center mt-5 py-3">
+                        <img width={95} src="https://res.cloudinary.com/dnysmjaoi/image/upload/v1764499135/search-min_kphlen.png" alt="" />
+                        <div className="Khcd2w">No stops found</div>
+                        <div className="lJ7Fr mt-2">We could not find any stops</div>
+                        <div className="lJ7Fr">matching your search.</div>
+                    </div>
 
-                    ) : (
-                        showList.map((stop) => (
-                            <li key={stop} onClick={() => handleSelectStop(stop)}>{stop}</li>
-                        ))
-                    )}
-                </ul>
+                ) : (
+                    <ul className="Ku7Gx">
+                        {showList.map((stop) => (
+                        <li key={stop} onClick={() => handleSelectStop(stop)}>{stop}</li>
+                        ))}
+                    </ul>
+                )}
 
             </div>
 

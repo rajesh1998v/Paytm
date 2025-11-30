@@ -474,7 +474,7 @@ textarea{
   font-weight: 500;
   padding: 8px ;
   border-radius: 10px;
-  font-size: 14px;
+  font-size: 15px;
   color: #bebaba;
   margin-top: 14px;
 
@@ -485,10 +485,10 @@ textarea{
 }
 .bg-clor span{
   text-decoration: line-through;
-  color: #e9e0e0!important;;
+  color: #b9dee9!important;;
 }
 .kHgT7j{
-  color: #8f8d8d;
+  color: #8d8f8f;
   font-size: 12px;
   padding-bottom: 14px;
 }
