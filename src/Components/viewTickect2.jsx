@@ -30,7 +30,7 @@ function ViewTicket2() {
                         <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                     </svg>
                 </div>
-                <div className="texts">Prajapita Brahmakumari Marg Brts</div>
+                <div className="texts">Kadodara Bus Station</div>
 
             </div>
             <div className="text-center my-4">Scan this QR at Entry & Exit Points</div>
