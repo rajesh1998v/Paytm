@@ -1,22 +1,25 @@
 import React from "react";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import TicketTimer from "./ticketTimer";
 
 function Ticket() {
-    
+
+    const location = useLocation();
+    const { from, to } = location.state || {};
+
     const navigate = useNavigate();
     const viewTicket = () => {
-        navigate("/viewticket");
+        navigate("/viewticket", { state: { from: from, to: to, }, });
     }
 
-  
+
     return (
         <div className="p14">
             <div className="KdsWe3">
                 <div className>
                     <Link className="text-dark" to="/station">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width={20} class="">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                            <path strokeLinecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                         </svg>
                     </Link>
                 </div>
@@ -34,14 +37,14 @@ function Ticket() {
                         </div>
                     </div>
 
-                    <div className="khFr4 d-flex">
-                        <div className="texts">Prajapita Brahmakumari Marg Brts</div>
+                    <div className="khFr4">
+                        <div className="texts text-end">{from?from:"Prajapita Brahmakumari Marg Brts"}</div>
                         <div className="px-1">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width={14} class="mx-1">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                                <path strokeLinecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                             </svg>
                         </div>
-                        <div className="texts">Mangal Pandey Hall Brts</div>
+                        <div className="texts">{to?to:"Mangal Pandey Hall Brts"}</div>
                     </div>
                     <div className="pgr4e font14 text-center pt-1 my-2">1 Adult Ticket</div>
                     <div className="Kuj6d">
@@ -67,7 +70,7 @@ function Ticket() {
                     <div className="px-2 py-3">
                         <div className="Kuj6g">
                             <div className="font14">Your ticket is valid for</div>
-                            <TicketTimer value="timer"/>
+                            <TicketTimer value="timer" />
                             <div className="py-2">
                                 <button className="btn btn-primary Jh7gt3" onClick={() => viewTicket()}>View your Tickets</button>
                             </div>

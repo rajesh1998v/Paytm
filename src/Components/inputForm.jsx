@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 function InputForm() {
 
-    const stations = ["Railway Station Terminal", "Linear Bus Stop", "Golden Point", "Sahara Darwaja", "Chowk Terminal", "Kamela Darwaja", "Kinnary Cinema", "Maan Darwaja"];
+    const stations = ["Railway Station Terminal", "Linear Bus Stop", "Golden Point", "Sahara Darwaja", "Chowk Terminal", "Kamela Darwaja", "Kinnary Cinema", "Maan Darwaja","Kadodara", "Jolva"];
     const [from, setFrom] = useState("");
     const [to, setTo] = useState("");
     const [activeField, setActiveField] = useState(null);
@@ -106,7 +106,7 @@ function InputForm() {
     }
 
     const heading = filtered.length !== 0 && searchText.length >= 3 ? "Suggested Stops" : searchText.length >= 3 && filtered.length === 0 ? "" : "Popular Stops";
-    const showList = searchText.length >= 3 ? filtered : stations;
+    const showList = (searchText.length >= 3 ? filtered : stations) .filter((stop) => stop !== from && stop !== to);
 
 
 
@@ -118,7 +118,7 @@ function InputForm() {
                     <div className="d-flex">
                         <Link className="text-dark" to="/station">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width={20} class="">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                                <path strokeLinecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                             </svg>
                         </Link>
                         <div className="Khcd2w">
