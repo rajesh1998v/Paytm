@@ -106,7 +106,7 @@ function InputForm() {
     }
 
     const heading = filtered.length !== 0 && searchText.length >= 3 ? "Suggested Stops" : searchText.length >= 3 && filtered.length === 0 ? "" : "Popular Stops";
-    const showList = (searchText.length >= 3 ? filtered : stations) .filter((stop) => stop !== from && stop !== to);
+    const showList = (searchText.length >= 3 ? filtered : stations).filter((stop) => stop !== from && stop !== to);
 
 
 
