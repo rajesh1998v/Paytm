@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 function InputForm() {
 
-    const stations = ["Railway Station Terminal", "Linear Bus Stop", "Golden Point", "Sahara Darwaja", "Chowk Terminal", "Kamela Darwaja", "Kinnary Cinema", "Maan Darwaja","Kadodara", "Jolva"];
+    const stations = ["Railway Station Terminal", "Linear Bus Stop", "Golden Point", "Sahara Darwaja", "Chowk Terminal", "Kamela Darwaja", "Kinnary Cinema", "Maan Darwaja","Kadodara", "Jolva","Sant Shree Kheteshwar Circle Brt"];
     const [from, setFrom] = useState("");
     const [to, setTo] = useState("");
     const [activeField, setActiveField] = useState(null);
