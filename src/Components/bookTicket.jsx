@@ -53,7 +53,7 @@ function City() {
                 <div className="Kjuh-left">
                     <div className="pgr4e">1 Adult Ticket</div>
                     <div className="d-flex mt-1 ">
-                        <div className="HysD7G">Magob Parvat Khadi Bridge BRTS</div>
+                        <div className="HysD7G">Prajapita Brahmakumari Marg Brts</div>
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width={16} class="mx-2 mt-2">
                                 <path strokeLinecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
@@ -65,14 +65,14 @@ function City() {
 
                 </div>
                 <div className="Kjuh-right">
-                    <button onClick={() => handleTicket()}>Buy &#x20B9; 8</button>
+                    <button onClick={() => handleTicket()}>Buy &#x20B9; 12</button>
                 </div>
             </div>
             <div className="Kjf5Dx">
                 <div className="Kjuh-left">
                     <div className="pgr4e">1 Adult Ticket</div>
                     <div className="d-flex mt-1 ">
-                        <div className="HysD7G">Amazia Amusement Park Brts</div>
+                        <div className="HysD7G">Mangal Pandey Hall Brts</div>
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width={16} class="mx-2 mt-2">
                                 <path strokeLinecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
@@ -84,7 +84,7 @@ function City() {
 
                 </div>
                 <div className="Kjuh-right">
-                    <button onClick={() => handleTicket2()}>Buy &#x20B9; 8</button>
+                    <button onClick={() => handleTicket2()}>Buy &#x20B9; 12</button>
                 </div>
             </div>
 
