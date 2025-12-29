@@ -3,6 +3,7 @@ import { Link ,useLocation} from 'react-router-dom';
 import TicketTimer from "./ticketTimer";
 
 function ViewTicket() {
+    
 
  const location = useLocation();
     const { from, to } = location.state || {};
