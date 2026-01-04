@@ -118,6 +118,17 @@ function InputForm() {
         }
     }
 
+    if (!data[0]) {
+        return (
+            <div className="paytm-loader height">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        );
+    }
 
 
     const heading = filtered.length !== 0 && searchText.length >= 3 ? "Suggested Stops" : searchText.length >= 3 && filtered.length === 0 ? "" : "Popular Stops";
@@ -167,17 +178,7 @@ function InputForm() {
                 </div>
             </div>
             <div className="Khcd2w py-2 p14 m-0">{heading}</div>
-            {/* <div className="Khcd2w py-2 p14 m-0">Suggested Stops</div> */}
-            {/* <ul >
-                <li>Railway Station Terminal</li>
-                
-                <li>Golden Point</li>
-                <li>Sahara Darwaja</li>
-                <li>Chowk Terminal</li>
-                <li>Kamela Darwaja</li>
-                <li>Kinnary Cinema</li>
-                <li>Maan Darwaja</li>
-            </ul> */}
+
             <div>
                 {searchText.length >= 3 && filtered.length === 0 ? (
                     <div className="text-center mt-5 py-3">
