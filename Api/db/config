@@ -1,0 +1,12 @@
+const mongoose = require("mongoose");
+
+
+mongoose.connect("mongodb+srv://onlineShop:OnlineShop8789@cluster0.ltbtjlo.mongodb.net/AllStation")
+    .then(() => {
+        console.log("Mongodb connected.");
+    }).catch((err) => {
+        console.log("no connection");
+    })
+
+
+
