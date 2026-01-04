@@ -663,3 +663,50 @@ textarea{
   font-weight: 500;
   line-height: 16px;
 }
+
+/* loader */
+
+
+.paytm-loader {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.paytm-loader span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: wave 1.4s infinite ease-in-out;
+}
+
+.paytm-loader span:nth-child(1),
+.paytm-loader span:nth-child(2),
+.paytm-loader span:nth-child(3) {
+  background: #002975;
+}
+
+.paytm-loader span:nth-child(4),
+.paytm-loader span:nth-child(5) {
+  background: #01acfe;
+}
+
+.paytm-loader span:nth-child(1) { animation-delay: 0s; }
+.paytm-loader span:nth-child(2) { animation-delay: 0.15s; }
+.paytm-loader span:nth-child(3) { animation-delay: 0.3s; }
+.paytm-loader span:nth-child(4) { animation-delay: 0.45s; }
+.paytm-loader span:nth-child(5) { animation-delay: 0.6s; }
+
+
+@keyframes wave {
+  0%, 100% {
+    transform: scale(0.6);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}

@@ -1,11 +1,13 @@
 import React, { useRef, useState, useEffect } from "react";
+import axios from "axios";
 import { Link, useNavigate } from 'react-router-dom';
 
 // import Ticket from "./ticket";
 
 function InputForm() {
 
-    const stations = ["Railway Station Terminal", "Linear Bus Stop", "Golden Point", "Sahara Darwaja", "Chowk Terminal", "Kamela Darwaja", "Kinnary Cinema", "Maan Darwaja","Kadodara", "Aaspas Dada Temple Brts","Mangal Pandey Hall Brts","Sant Shree Kheteshwar Circle Brt"];
+    const stations = ["Railway Station Terminal", "Linear Bus Stop", "Golden Point", "Sahara Darwaja", "Chowk Terminal", "Kamela Darwaja", "Kinnary Cinema", "Maan Darwaja", "Kadodara", "Aaspas Dada Temple Brts", "Mangal Pandey Hall Brts", "Sant Shree Kheteshwar Circle Brt"];
+    const [data, setData] = useState([]);
     const [from, setFrom] = useState("");
     const [to, setTo] = useState("");
     const [activeField, setActiveField] = useState(null);
@@ -13,15 +15,28 @@ function InputForm() {
     const [filtered, setFiltered] = useState([]);
     const [isFromSelected, setIsFromSelected] = useState(false);
 
+
     const fromRef = useRef(null);
     const toRef = useRef(null);
     const navigate = useNavigate();
 
     useEffect(() => {
+        const fetchData = async () => {
+            try {
+                let response = await axios.get("https://paytm-jnn9.onrender.com" + "/stations");
+                let { data } = response;
+                setData(data);
+                // console.log(data);
+
+            } catch (err) {
+                console.log(err);
+            }
+        };
+
         if (fromRef.current) {
             fromRef.current.focus();
         }
-
+        fetchData();
     }, []);
 
     const handleChange = (e, field) => {
@@ -42,11 +57,9 @@ function InputForm() {
     const runFilter = (value) => {
 
         if (value.length >= 3) {
-            const matches = stations.filter((s) =>
-                s.toLowerCase().startsWith(value.toLowerCase())
+            const matches = data.filter((s) =>
+                s.name.toLowerCase().startsWith(value.toLowerCase())
             );
-            console.log(matches);
-
             setFiltered(matches);
         } else {
             setFiltered([]);
@@ -105,8 +118,11 @@ function InputForm() {
         }
     }
 
+
+
     const heading = filtered.length !== 0 && searchText.length >= 3 ? "Suggested Stops" : searchText.length >= 3 && filtered.length === 0 ? "" : "Popular Stops";
-    const showList = (searchText.length >= 3 ? filtered : stations).filter((stop) => stop !== from && stop !== to);
+    const showList = (searchText.length >= 3 ? filtered : data).filter((stop) => stop.name !== from && stop.name !== to);
+
 
 
 
@@ -117,8 +133,8 @@ function InputForm() {
                 <div className="KdsWe3">
                     <div className="d-flex">
                         <Link className="text-dark" to="/station">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width={20} class="">
-                                <path strokeLinecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" width={20} class="">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                             </svg>
                         </Link>
                         <div className="Khcd2w">
@@ -172,16 +188,32 @@ function InputForm() {
                     </div>
 
                 ) : (
-                    <ul className="Ku7Gx">
-                        {showList.map((stop) => (
-                        <li key={stop} onClick={() => handleSelectStop(stop)}>{stop}</li>
-                        ))}
-                    </ul>
+                    <div>
+                        {showList[0] ? (
+                            <ul className="Ku7Gx">
+                                {showList.slice(0, 10).map((stop) => (
+                                    <li key={stop} onClick={() => handleSelectStop(stop.name)}>
+                                        {stop.name}
+                                    </li>
+                                ))}
+                            </ul>
+                        ) : (
+                            <div className="paytm-loader">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        )
+                        }
+
+
+                    </div>
+
                 )}
 
             </div>
-
-
 
 
 

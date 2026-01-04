@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes,Route,Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import "../assets/styles/App.css";
 // import Navbar from "./navbars";
 import Home from "./home";
@@ -11,26 +11,28 @@ import Ticket2 from "./ticket2";
 import ViewTicket2 from "./viewTickect2";
 import RemainingTime from "./ticketTimer";
 import InputForm from "./inputForm";
+import Loader from "./loader";
 
 
-function mainComponent(){
+function mainComponent() {
 
-    return(
+    return (
         <>
             {/* <Navbar/> */}
             <Routes>
 
-            <Route path="/inputForm" element={<InputForm/>}/>
-            <Route path="/remainingTime" element={<RemainingTime/>}/>
-            <Route path="/viewticket2" element={<ViewTicket2/>}/>
-            <Route path="/ticket2" element={<Ticket2/>}/>
-            <Route path="/viewticket" element={<ViewTicket/>}/>
-            <Route path="/ticket" element={<Ticket/>}/>
-            <Route path="/station" element={<BookTicket/>}/>
-            <Route path="/city" element={<City/>}/>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/" element={<Navigate replace to="/"/>}  />
- 
+                <Route path="/loader" element={<Loader />} />
+                <Route path="/inputForm" element={<InputForm />} />
+                <Route path="/remainingTime" element={<RemainingTime />} />
+                <Route path="/viewticket2" element={<ViewTicket2 />} />
+                <Route path="/ticket2" element={<Ticket2 />} />
+                <Route path="/viewticket" element={<ViewTicket />} />
+                <Route path="/ticket" element={<Ticket />} />
+                <Route path="/station" element={<BookTicket />} />
+                <Route path="/city" element={<City />} />
+                <Route path="/" element={<Home />} />
+                <Route path="/" element={<Navigate replace to="/" />} />
+
             </Routes>
         </>
     )
