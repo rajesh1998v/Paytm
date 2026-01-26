@@ -22,7 +22,7 @@ function City() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                let response = await axios.post("http://localhost:2410" + "/fare", { from: from, to: to });
+                let response = await axios.post("https://paytm-jnn9.onrender.com" + "/fare", { from: from, to: to });
                 let { data } = response;
 
                 setFare(data);
