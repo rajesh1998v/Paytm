@@ -1,20 +1,25 @@
 import React from "react";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate ,useLocation} from 'react-router-dom';
 import TicketTimer from "./ticketTimer";
 
 function Ticket2() {
+
+     const location = useLocation();
+      const { from, to ,price} = location.state || {};
+      
    
     const navigate = useNavigate();
     const viewTicket = () => {
-        navigate("/viewticket2");
+        navigate("/viewticket2",{ state: { from, to, price }});
     }
+    
 
     return (
         <div className="p14">
             <div className="KdsWe3">
                 <div className>
                     <Link className="text-dark" to="/station">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" width={20} class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" width={20} className="">
                             <path stroke-linecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                         </svg>
                     </Link>
@@ -34,13 +39,13 @@ function Ticket2() {
                     </div>
 
                     <div className="khFr4 d-flex">
-                        <div className="texts">Mangal Pandey Hall Brts</div>
+                        <div className="texts">{from}</div>
                         <div className="px-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" width={14} class="mx-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" width={14} className="mx-1">
                                 <path stroke-linecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                             </svg>
                         </div>
-                        <div className="texts">Prajapita Brahmakumari Marg Brts</div>
+                        <div className="texts">{to}</div>
                     </div>
                     <div className="pgr4e font14 text-center pt-1 my-2">1 Adult Ticket</div>
                     <div className="Kuj6d">
@@ -52,7 +57,7 @@ function Ticket2() {
 
                     <div className="text-center my-2 font38">
                         <span>&#x20B9;</span>
-                        <span>12</span>
+                        <span>{price}</span>
                         <img className="mb-1 mx-1" width={48} src="https://res.cloudinary.com/dnysmjaoi/image/upload/v1763885750/ChatGPT_Image_Nov_23_2025_01_45_28_PM_yc9dek.png" alt="" />
 
                     </div>

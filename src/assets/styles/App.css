@@ -396,6 +396,7 @@ textarea{
   font-weight: 600;
   color: #00baf2;
   margin-top: 14px;
+  text-decoration: none;
 }
 
 /* ----Form ---------- */
@@ -712,4 +713,34 @@ textarea{
     transform: scale(1.2);
     opacity: 1;
   }
+}
+
+.mt10{
+  margin-top: 50%;
+}
+
+.edrf{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dkdjdd{
+  position: sticky;    
+  top: 0;
+  background: #fff;
+  z-index: 10;
+  padding: 4px 16px;
+}
+.ssss{
+  flex: 1;
+  overflow-y: auto;
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+}
+
+.ssss::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  /* display: none;  */
 }

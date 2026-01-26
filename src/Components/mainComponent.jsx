@@ -12,6 +12,7 @@ import ViewTicket2 from "./viewTickect2";
 import RemainingTime from "./ticketTimer";
 import InputForm from "./inputForm";
 import Loader from "./loader";
+import ViewAll from "./viewAll";
 
 
 function mainComponent() {
@@ -21,6 +22,7 @@ function mainComponent() {
             {/* <Navbar/> */}
             <Routes>
 
+                <Route path="/viewAll" element={<ViewAll />} />
                 <Route path="/loader" element={<Loader />} />
                 <Route path="/inputForm" element={<InputForm />} />
                 <Route path="/remainingTime" element={<RemainingTime />} />

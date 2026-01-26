@@ -7,7 +7,7 @@ function Navbars() {
 
     return (
         <div className="">
-            <div className="paytm-loader mt-5">
+            <div className="paytm-loader mt10">
                 <span></span>
                 <span></span>
                 <span></span>

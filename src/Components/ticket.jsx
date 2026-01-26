@@ -5,11 +5,11 @@ import TicketTimer from "./ticketTimer";
 function Ticket() {
 
     const location = useLocation();
-    const { from, to } = location.state || {};
+    const { from, to ,price} = location.state || {};
 
     const navigate = useNavigate();
     const viewTicket = () => {
-        navigate("/viewticket", { state: { from: from, to: to, }, });
+        navigate("/viewticket", { state: { from, to, price }, });
     }
 
 
@@ -18,7 +18,7 @@ function Ticket() {
             <div className="KdsWe3">
                 <div className>
                     <Link className="text-dark" to="/station">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" width={20} class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" width={20} className="">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                         </svg>
                     </Link>
@@ -40,7 +40,7 @@ function Ticket() {
                     <div className="khFr4">
                         <div className="texts text-end">{from?from:"Prajapita Brahmakumari Marg Brts"}</div>
                         <div className="px-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" width={14} class="mx-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" width={14} className="mx-1">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                             </svg>
                         </div>
@@ -56,7 +56,7 @@ function Ticket() {
 
                     <div className="text-center my-2 font38">
                         <span>&#x20B9;</span>
-                        <span>12</span>
+                        <span>{price?price:12}</span>
                         <img className="mb-1 mx-1" width={48} src="https://res.cloudinary.com/dnysmjaoi/image/upload/v1763885750/ChatGPT_Image_Nov_23_2025_01_45_28_PM_yc9dek.png" alt="" />
 
                     </div>
@@ -65,6 +65,7 @@ function Ticket() {
                         <span className="font12"><TicketTimer /></span>
                     </div>
 
+                    <div className="dota mb-1"></div>
                     <div className="dota mb-1"></div>
 
                     <div className="px-2 py-3">

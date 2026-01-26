@@ -1,17 +1,17 @@
-let express = require("express") ;
+let express = require("express");
 let Station = require("./models/Station");
-const bodyParser = require ('body-parser');
+const bodyParser = require('body-parser');
 const cors = require('cors');
 
 var app = express();
 require("./db/config");
 
-app.use(bodyParser.urlencoded({ extended:true}))
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json());
 app.use(cors());
 
 
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
     "Access-Control-Allow-Headers",
@@ -22,21 +22,21 @@ app.use(function(req, res, next) {
 });
 
 var port = process.env.PORT || 2410;
-app.listen(port,()=>console.log(`Listening on port ${port}!`));
+app.listen(port, () => console.log(`Listening on port ${port}!`));
 
 app.post("/addStation", async (req, res, next) => {
-    const { name,code,latitude,longitude } = req.body;
-    // console.log(req.body);
-    const existingSt = await Station.findOne({ code });
-    
-    if (existingSt) {
-      return res.status(400).json({ success: false,message: 'Station already exists',});
-    }
-    let station = new Station({name,code,latitude,longitude });
-    let result = await station.save();
-  
-    res.status(201).json({ success: true,result, message: 'success' });
-  });
+  const { name, code, latitude, longitude } = req.body;
+  // console.log(req.body);
+  const existingSt = await Station.findOne({ code });
+
+  if (existingSt) {
+    return res.status(400).json({ success: false, message: 'Station already exists', });
+  }
+  let station = new Station({ name, code, latitude, longitude });
+  let result = await station.save();
+
+  res.status(201).json({ success: true, result, message: 'success' });
+});
 
 
 function getDistance(lat1, lon1, lat2, lon2) {
@@ -71,7 +71,18 @@ app.post("/fare", async (req, res) => {
       toStation.longitude
     );
 
-    const price = Math.round(distance * 1.3); // ₹2 per km
+    // const price = Math.round(distance * 1.3); // ₹2 per km
+
+    function calculatePrice(distance) {
+      if (distance <= 2) return 4;
+      if (distance <= 4.8) return 8;
+      if (distance <= 9.9) return 12;
+      return Math.round(distance * 1.3);
+    }
+
+    const price = calculatePrice(distance);
+
+
 
     res.json({
       from: fromStation.name,
@@ -88,7 +99,7 @@ app.post("/fare", async (req, res) => {
 // GET all stations
 app.get("/stations", async (req, res) => {
   try {
-    const stations = await Station.find(); 
+    const stations = await Station.find();
     res.json(stations);
   } catch (err) {
     res.status(500).json({ message: err.message });

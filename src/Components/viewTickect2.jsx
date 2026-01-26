@@ -1,16 +1,18 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import TicketTimer from "./ticketTimer";
 
 function ViewTicket2() {
 
+    const location = useLocation();
+    const { from, to, price } = location.state || {};
 
     return (
         <div className="p14">
             <div className="KdsWe3">
                 <div className="d-flex">
-                    <Link className="text-dark" to="/ticket">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" width={20} class="">
+                    <Link className="text-dark" to="/ticket2" state={{from, to, price}}>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" width={20} className="">
                             <path stroke-linecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                         </svg>
                     </Link>
@@ -24,13 +26,13 @@ function ViewTicket2() {
             </div>
 
             <div className="khFr4 d-flex">
-                <div className="texts">Mangal Pandey Hall Brts</div>
+                <div className="texts">{from}</div>
                 <div className="px-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" width={16} class="mx-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" width={16} className="mx-1">
                         <path stroke-linecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                     </svg>
                 </div>
-                <div className="texts">Prajapita Brahmakumari Marg Brts</div>
+                <div className="texts">{to}</div>
 
             </div>
             <div className="text-center my-4">Scan this QR at Entry & Exit Points</div>
@@ -42,15 +44,15 @@ function ViewTicket2() {
             <div className="px-2 py-3">
                 <div className="Kuj6g">
                     <div className="font14">Your ticket is valid for</div>
-                    <TicketTimer value="timer"/>
+                    <TicketTimer value="timer" />
 
                 </div>
                 <div className="jYg5f">
                     <div className="JhYu3 pt-0 pb-2 ">
                         <div className="font16">Ticket Details</div>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" width={18} class="">
-                                <path stroke-linecap="round" strokeLinejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
-                            </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" width={18} className="">
+                            <path stroke-linecap="round" strokeLinejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                        </svg>
                     </div>
 
                     <div className="JhYu3  bord">
