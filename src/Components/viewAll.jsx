@@ -64,7 +64,7 @@ function ViewAll() {
                             </svg>
 
                         </div>
-                        <div className="HysD7G">Prajapita Brahmakumari Marg Brts</div>
+                        <div className="HysD7G">Sarthana Nature Park Brts</div>
                     </div>
 
                 </div>
