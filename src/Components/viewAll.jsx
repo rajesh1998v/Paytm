@@ -69,7 +69,7 @@ function ViewAll() {
 
                 </div>
                 <div className="Kjuh-right">
-                    <button onClick={() => handleTicket2("Mangal Pandey Hall Brts", "Prajapita Brahmakumari Marg Brts", 12)}>Buy &#x20B9; 12</button>
+                    <button onClick={() => handleTicket2("Mangal Pandey Hall Brts", "Sarthana Nature Park Brts", 12)}>Buy &#x20B9; 12</button>
                 </div>
             </div>
             <div className="Kjf5Dx">
